@@ -4,23 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/activity_display_message"
+    android:orientation="vertical"
+    tools:context=".DisplayMessageActivity">
 
-    <EditText
-        android:layout_width="0dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/ett_message"
-        android:text="@string/str_ett_message"
+        android:id="@+id/tvw_message"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/str_btn_send"
-        android:id="@+id/btn_send"
-        android:onClick="sendMessage"
+        android:text="@string/str_btn_close"
+        android:onClick="closeDisplayMessage"
         />
-
 
 </LinearLayout>
