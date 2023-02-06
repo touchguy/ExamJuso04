@@ -3,4 +3,6 @@
     <string name="str_ett_message">메시지를 입력하세요</string>
     <string name="str_btn_send">보내기</string>
     <string name="str_btn_close">닫기</string>
+    <string name="str_btn_read_groupname">주소록 읽어오기</string>
+    <string name="str_textview_groupname">주소록명</string>
 </resources>

@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void readGroupName(View view) {
+        Intent intent = new Intent(this, GroupNameActivity.class);
+        startActivity(intent);
+    }
 }
