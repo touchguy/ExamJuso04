@@ -9,12 +9,18 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    PermissionSupport permission;
     EditText editText = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        permission = new PermissionSupport(this, this);
+        if(!permission.checkPermission()) {
+            permission.requestPermission();
+        }
     }
 
 
@@ -25,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
-
-
-
     }
 
     public void readGroupName(View view) {
